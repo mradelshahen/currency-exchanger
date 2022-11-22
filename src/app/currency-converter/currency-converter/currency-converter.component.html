@@ -1,0 +1,47 @@
+<form [formGroup]="ConverterForm">
+    <div class="display_inline_block">
+        <label>{{swapFlage == false ? 'From' : 'To'}}</label>
+        <br />
+        <select formControlName="from">
+            <option *ngFor="let currency of all_currencies  ">
+                {{currency }}
+            </option>
+        </select>
+    </div>
+    <div class="display_inline_block">
+        <button (click)="swapSelectedCurrency()">swap</button>
+    </div>
+    <div class="display_inline_block">
+        <label>{{swapFlage == false ? 'To' : 'From'}}</label>
+        <br />
+        <select formControlName="to">
+            <option *ngFor="let currency of all_currencies  ">
+                {{currency }}
+            </option>
+        </select>
+    </div>
+    <br />
+</form>
+<label>{{titleOfEnterdValue}}</label>
+<br />
+<input type="number" [(ngModel)]="enterd_value" (change)="desableEnableFields($event)" min="0" />
+
+<br />
+<button *ngIf="this.swapFlage == false"
+    (click)="convertCurrency(getFormControl['from'].value, getFormControl['to'].value);">Convert Currency</button>
+<button *ngIf="this.swapFlage == true"
+    (click)="convertCurrency(getFormControl['to'].value,getFormControl['from'].value);">Convert Currency</button>
+<br />
+
+<label>result</label>
+<br />
+<input type="number" disabled [(ngModel)]="resulte" />
+<br />
+
+<a *ngIf="getFormControl['from'].value != null " >
+    {{getFormControl['from'].value}} Details
+</a>
+
+<a *ngIf="getFormControl['to'].value != null ">
+    {{getFormControl['to'].value}} Details
+</a>

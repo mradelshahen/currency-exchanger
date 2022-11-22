@@ -1,0 +1,23 @@
+<nav>
+    <div class="container">
+
+        <div class="logo">
+            <h1>Currency <span>Exchanger</span></h1>
+        </div>
+
+        <div class="col-6  menu-container">
+            <div id="menu" (click)="flag = !flag" [ngClass]="{ open: flag == true }" class="menu align-items-center">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+        <ul [ngClass]="{ o: flag == true }">
+            <li>USD</li>
+            <li>EUR</li>
+        </ul>
+        
+
+    </div>
+</nav>

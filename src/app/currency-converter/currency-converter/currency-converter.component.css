@@ -1,0 +1,42 @@
+input:focus {
+    border: 3px solid #555;
+}
+
+input, select {
+    padding: 5px 10px;
+    margin: 8px 0;
+    width: 200px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button, a {
+    background-color: #d60;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 5px 24px;
+    cursor: pointer;
+    color: #222;
+    font-weight: bolder;
+}
+
+a {
+    background-color: #555;
+    color: #fff;
+}
+
+.display_inline_block {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+@media (max-width: 991px) {
+    .display_inline_block{
+        display: block;
+    }
+}

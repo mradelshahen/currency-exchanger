@@ -1,0 +1,149 @@
+ nav {
+     width: 100%;
+     height: 70px;
+     background-color: #f0f0d0;
+     position: fixed;
+     top: 0;
+ }
+
+ .logo {
+     float: left;
+ }
+
+ h1 {
+     margin: 20px 0;
+     color: #444;
+     align-content: center;
+     font-weight: bolder;
+ }
+
+ h1 span {
+     color: #d60;
+ }
+
+ ul, .menu {
+     float: right;
+     list-style: none;
+ }
+
+ .menu {
+     display: none;
+ }
+
+ ul {
+     list-style: none;
+     font-weight: bolder;
+     color: #444;
+     margin: 25px 0;
+     padding: 0;
+ }
+
+ ul li {
+     display: inline-block;
+     padding: 0 10px;
+     cursor: pointer;
+     transition: 0.3s ease-in-out;
+ }
+
+ ul li:hover {
+     color: #d60;
+ }
+
+
+
+
+ /* Animate menu */
+ nav .menu {
+     width: 25px;
+     height: 20px;
+     margin: 25px;
+     position: relative;
+     cursor: pointer;
+ }
+
+ nav .menu span {
+     width: 100%;
+     height: 4px;
+     position: absolute;
+     background-color: #d60;
+     border-radius: 30px;
+     transition: 0.5s all ease-in-out;
+ }
+
+ nav .menu span:nth-child(1) {
+     top: 0;
+ }
+
+ nav .menu span:nth-child(2) {
+     top: 8px;
+ }
+
+ nav .menu span:nth-child(3) {
+     bottom: 1px;
+ }
+
+ nav .menu.open span:nth-child(1) {
+     top: 18px;
+     width: 0%;
+ }
+
+ nav .menu.open span:nth-child(2) {
+     transform: rotate(45deg);
+     background-color: #fff;
+ }
+
+ nav .menu.open span:nth-child(3) {
+     transform: rotate(-45deg);
+     top: 8px;
+ }
+
+ /********************************************************************/
+
+ @media (max-width: 576px) {
+     h1 {
+         font-size: 18px !important;
+     }
+
+     .menu {
+         display: block !important;
+     }
+
+     .menu-container {
+         display: block !important;
+     }
+
+     ul {
+         visibility: hidden;
+         text-align: center;
+         width: 100%;
+         float: none !important;
+         z-index: 999 !important;
+         overflow: hidden;
+         height: 0px;
+         transition: 0.5s ease-in-out;
+         margin: 0 !important;
+     }
+
+     ul li {
+         display: block;
+         padding: 15px 40px;
+         margin: 0;
+         font-size: 12px !important;
+         text-align: center;
+         color: #bbb;
+         background-color: #171717;
+         border-bottom: 1px solid rgba(102, 102, 102, 0.3) !important;
+     }
+
+     ul li:hover {
+         background-color: #2e2e2e !important;
+     }
+
+     ul.o {
+         visibility: visible !important;
+         display: block;
+         height: 90px !important;
+         transition: 0.5s ease-in-out;
+     }
+
+ }
