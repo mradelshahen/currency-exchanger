@@ -3,6 +3,7 @@
         <label>{{swapFlage == false ? 'From' : 'To'}}</label>
         <br />
         <select formControlName="from">
+            
             <option *ngFor="let currency of all_currencies  ">
                 {{currency }}
             </option>

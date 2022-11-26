@@ -1,1 +1,14 @@
-<p>list-of-conversions works!</p>
+<table class="list">
+    <thead>
+        <tr>
+            <td>{{swape == false ? fromValue_toValue?.fromValue : fromValue_toValue?.toValue}}</td>
+            <td>{{swape == false ? fromValue_toValue?.toValue : fromValue_toValue?.fromValue}}</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of resulte">
+            <td>{{item?.fromValue}}</td>
+            <td>{{item?.toValue}}</td>
+        </tr>
+    </tbody>
+</table>

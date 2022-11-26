@@ -20,8 +20,10 @@ export class InterceptorInterceptor implements HttpInterceptor {
 
       let authRequest = request.clone();
       authRequest = request.clone({
-        headers: request.headers.set("apikey", "xDr1b7J4CtStzpMjMkvJ8SYMWuqbEZGZ"),
-        // headers: request.headers.set("apikey", "LTdkSuU7tVpS3KLVHEP4nPNQMNfHzUGE")        
+        // headers: request.headers.set("apikey", "xDr1b7J4CtStzpMjMkvJ8SYMWuqbEZGZ"),
+        headers: request.headers.set("apikey", "LTdkSuU7tVpS3KLVHEP4nPNQMNfHzUGE")      
+        // headers: request.headers.set("apikey", "2Z79kcgpCJ7Q2BbAtkudRmTEGziQrvHB")        
+
       });
       /////////////////////////////////////
     return next.handle(authRequest);

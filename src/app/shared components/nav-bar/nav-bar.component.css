@@ -89,7 +89,7 @@
 
  nav .menu.open span:nth-child(2) {
      transform: rotate(45deg);
-     background-color: #fff;
+     background-color: #444;
  }
 
  nav .menu.open span:nth-child(3) {

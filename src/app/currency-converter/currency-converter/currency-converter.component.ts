@@ -14,6 +14,7 @@ export class CurrencyConverterComponent implements OnInit {
   resulte: number = 0
   ConverterForm!: FormGroup;
   swapFlage: boolean = false;
+  @Output() formValue_ToValue = new EventEmitter();
 
   constructor(private currencyCoverterService: CurrencyCoverterService) { }
 
@@ -70,7 +71,8 @@ export class CurrencyConverterComponent implements OnInit {
   convertCurrency(from: string, to: string) {
     this.currencyCoverterService.GetMethod(`convert?to=${to}&from=${from}&amount=${this.enterd_value}`).subscribe((res) => {
       this.resulte = res.result;
-      console.log(res)
+      
+      this.formValue_ToValue.emit({ fromValue: from, toValue: to });
     })
   }
 

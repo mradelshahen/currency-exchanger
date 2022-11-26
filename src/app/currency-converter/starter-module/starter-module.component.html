@@ -1,5 +1,19 @@
 <div class="container">
+
+
+
     <div class="converter">
-        <app-currency-converter></app-currency-converter>
+        <app-currency-converter (formValue_ToValue)="getFromvalue_ToValue($event)"></app-currency-converter>
     </div>
+
+    <div class="lists">
+
+        <app-list-of-conversions class="list" *ngIf="fromValue_toValue" [fromValue_toValue]="fromValue_toValue" [swape]="false">
+        </app-list-of-conversions>
+        
+        <app-list-of-conversions class="list" *ngIf="fromValue_toValue" [fromValue_toValue]="fromValue_toValue" [swape]="true">
+        </app-list-of-conversions>
+
+    </div>
+
 </div>
